@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -20,6 +21,7 @@ import java.util.Collection;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
+@EnableAsync
 @SpringBootApplication
 public class HttpClientsApplication {
 
