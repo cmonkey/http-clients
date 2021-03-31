@@ -11,6 +11,7 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -18,11 +19,13 @@ import java.net.URI;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.concurrent.TimeUnit;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
 @EnableAsync
 @SpringBootApplication
+@EnableScheduling
 public class HttpClientsApplication {
 
 	public static void main(String[] args) {
@@ -56,6 +59,11 @@ public class HttpClientsApplication {
 					.retrieve()
 					.bodyToMono(ProjectsResponse.class);
 			Mono.zip(write, json).subscribe(tuple -> enumerate(tuple.getT2()));
+			try {
+				TimeUnit.SECONDS.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		};
 	}
 
