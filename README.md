@@ -16,6 +16,10 @@
     2021年3月31日11:45:17 fix executor not accepting a task 
     add thread sleep to HttpClientsApplication.ready method 
 
+    1. NPE eventloop 
+
+       add EnableScheduling Annotation to HttpClientsApplication 
+
 ## Upgrade Record 
 
   1. 2021年3月25日13:25:03 spring boot version 2.4.3 the to 2.4.4
