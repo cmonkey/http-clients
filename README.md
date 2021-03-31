@@ -6,8 +6,19 @@
 
 ## issues 
   
-  1. executor not accepting a task by ReactiveDataflowWithProjectReactor
+  1. executor not accepting a task by ReactiveDataflowWithProjectReactor 
+
+    2021年3月31日11:31:23 fix executor not accepting a task 
+    add thread sleep to ReactiveDataflowWithProjectReactor.begin method 
+
   2. executor not accepting a task by HttpClientsApplication
+
+    2021年3月31日11:45:17 fix executor not accepting a task 
+    add thread sleep to HttpClientsApplication.ready method 
+
+    1. NPE eventloop 
+
+       add EnableScheduling Annotation to HttpClientsApplication 
 
 ## Upgrade Record 
 
