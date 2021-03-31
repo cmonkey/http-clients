@@ -9,6 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 @SpringBootApplication
@@ -42,6 +43,11 @@ public class ReactiveDataflowWithProjectReactor {
                             Mono.fromCompletionStage(this.returnCompletableFuture(c))))
                     .map(tuple -> tuple.getT2() + "#" + tuple.getT1());
             count.subscribe(System.out::println);
+            try {
+                TimeUnit.SECONDS.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         };
     }
 
