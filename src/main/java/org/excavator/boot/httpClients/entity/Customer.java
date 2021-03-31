@@ -1,4 +1,4 @@
-package org.excavator.boot.httpClients;
+package org.excavator.boot.httpClients.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

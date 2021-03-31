@@ -1,4 +1,4 @@
-package org.excavator.boot.httpClients;
+package org.excavator.boot.httpClients.project;
 
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;

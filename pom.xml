@@ -55,7 +55,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-					<mainClass>org.excavator.boot.httpClients.HttpClientsApplication</mainClass>
+					<mainClass>org.excavator.boot.httpClients.project.HttpClientsApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

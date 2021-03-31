@@ -1,4 +1,4 @@
-package org.excavator.boot.httpClients;
+package org.excavator.boot.httpClients.reactive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
